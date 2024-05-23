@@ -7,7 +7,7 @@ import {
 } from '@thirdweb-dev/react';
 import { GetServerSideProps } from 'next';
 import { sanityClient, urlFor } from '../../sanity';
-import { Collection } from '../../typings';
+import { Collection } from '../../types';
 import Link from 'next/link';
 import { BigNumber } from 'ethers';
 import toast, { Toaster } from 'react-hot-toast';

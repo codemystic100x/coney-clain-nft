@@ -6,15 +6,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@sanity/image-url": "^1.0.1",
     "@thirdweb-dev/react": "^3.6.3",
     "@thirdweb-dev/sdk": "^3.6.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "ethers": "^5.7.2",
+    "lucide-react": "^0.379.0",
     "next": "^14.2.3",
     "next-sanity": "^3.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hot-toast": "^2.4.0"
+    "react-hot-toast": "^2.4.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
