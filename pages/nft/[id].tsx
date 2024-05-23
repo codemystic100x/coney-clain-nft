@@ -16,7 +16,7 @@ interface Props {
   collection: Collection;
 }
 
-const NFTDropPage = ({ collection }: Props) => {
+const NFTDropPage = ({ collection }: Props): JSX.Element => {
   const [claimedSupply, setClaimedSupply] = useState<number>(0);
   const [totalSupply, setTotalSupply] = useState<BigNumber>();
   const [priceInEth, setPriceInEth] = useState<string>();

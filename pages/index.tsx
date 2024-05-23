@@ -8,7 +8,7 @@ interface Props {
   collections: Collection[];
 }
 
-const Home = ({ collections }: Props) => {
+const Home = ({ collections }: Props): JSX.Element => {
   return (
     <div className='mx-auto flex min-h-screen max-w-7xl flex-col py-20 px-10 2xl:px-0'>
       <Head>

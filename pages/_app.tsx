@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain={Sepolia}
       clientId='817b130105e21ad61227af5b08fa50af'
     >
+      /* @ts-expect-error Server Component */
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
