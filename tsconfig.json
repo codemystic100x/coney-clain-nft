@@ -16,5 +16,8 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "paths": {
+    "react": ["./node_modules/@types/react"]
+  },
   "exclude": ["node_modules"]
 }

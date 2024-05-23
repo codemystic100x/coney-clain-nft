@@ -1,6 +1,6 @@
 // import 'server-only';
 
-import { createClient, type QueryParams } from 'next-sanity';
+import { createClient } from 'next-sanity';
 import createImageUrlBuilder from '@sanity/image-url';
 
 export const sanityClient = createClient({
@@ -10,5 +10,5 @@ export const sanityClient = createClient({
   useCdn: false,
 });
 
-export const urlFor = (source) =>
+export const urlFor = (source: any) =>
   createImageUrlBuilder(sanityClient).image(source);
