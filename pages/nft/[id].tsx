@@ -11,6 +11,10 @@ import { Collection } from '../../types';
 import Link from 'next/link';
 import { BigNumber } from 'ethers';
 import toast, { Toaster } from 'react-hot-toast';
+import { ConnectButton, darkTheme } from 'thirdweb/react';
+import { createThirdwebClient } from 'thirdweb';
+import { createWallet, inAppWallet } from 'thirdweb/wallets';
+import { ConnectWallet } from '@thirdweb-dev/react';
 
 interface Props {
   collection: Collection;
@@ -101,7 +105,7 @@ const NFTDropPage = ({ collection }: Props): JSX.Element => {
       })
       .catch((err) => {
         console.log('error: ', err);
-        toast('Whoops... Something went wrong!', {
+        toast('Something went wrong, Try switching Network to Sepolia', {
           style: {
             background: 'red',
             color: 'white',
@@ -160,12 +164,9 @@ const NFTDropPage = ({ collection }: Props): JSX.Element => {
               </h1>
             </Link>
 
-            <button
-              onClick={() => (address ? disconnect() : connectWithMetamask())}
-              className='rounded-full bg-rose-400 px-4 py-2 text-xs font-bold text-white lg:px-5 lg:py-3 lg:text-base'
-            >
-              {address ? 'Sign Out' : 'Sign In'}
-            </button>
+            <div className='rounded-full px-4 py-2 text-xs font-bold lg:px-5 lg:py-3 lg:text-base'>
+              <ConnectWallet switchToActiveChain={true} />
+            </div>
           </header>
 
           <hr className='my-2 border' />
